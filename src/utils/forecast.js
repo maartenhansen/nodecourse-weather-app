@@ -24,7 +24,7 @@ const forecast = (longitude, latitude, callback) => {
         } else if (body.success === false) {
             callback('These longitudes and latitudes do not match a correct set. Try again please.', undefined)
         } else {
-            callback(undefined, `It is currently ${body.current.temperature} degrees in ${body.location.name}.`)
+            callback(undefined, `It is currently ${body.current.temperature} degrees in ${body.location.name}. The wind speed is ${body.current.wind_speed}, but that is no problem as the humidity is ${body.current.humidity}.`)
         //    callback(undefined, response.body)
         }
     })
